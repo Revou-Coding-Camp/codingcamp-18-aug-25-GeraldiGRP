@@ -1,0 +1,50 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Simple To-Do List</title>
+    <link rel="stylesheet" href="css/style.css">
+</head>
+<body>
+    <div class="container">
+        <h1>Simple To-Do List</h1>
+        
+        <!-- To-Do Input Form -->
+        <form id="todoForm" class="todo-form">
+            <div class="form-group">
+                <label for="todoInput">Task</label>
+                <input type="text" id="todoInput" placeholder="What needs to be done?">
+                <div class="error" id="todoError">Please enter a task</div>
+            </div>
+            
+            <div class="form-group">
+                <label for="dateInput">Due Date</label>
+                <input type="date" id="dateInput">
+                <div class="error" id="dateError">Please select a valid date</div>
+            </div>
+            
+            <button type="submit" class="add-btn">Add Task</button>
+        </form>
+        
+        <!-- Filter Section -->
+        <div class="filter-section">
+            <span class="filter-title">Filter by:</span>
+            <select id="filterSelect">
+                <option value="all">All Tasks</option>
+                <option value="today">Today</option>
+                <option value="upcoming">Upcoming</option>
+                <option value="past">Past Due</option>
+            </select>
+        </div>
+        
+        <!-- To-Do List Display -->
+        <ul id="todoList" class="todo-list">
+            <!-- To-do items will be added here dynamically -->
+            <li class="empty-state">No tasks yet. Add a task to get started!</li>
+        </ul>
+    </div>
+
+<script src="js/script.js"></script>
+</body>
+</html>
